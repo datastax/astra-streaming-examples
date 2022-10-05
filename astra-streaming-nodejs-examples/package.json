@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "avro-js": "^1.11.0",
+    "pulsar-client": "^1.6.2"
+  }
+}

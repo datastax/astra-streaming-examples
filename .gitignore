@@ -1,0 +1,6 @@
+.DS_Store
+.vscode/
+target/
+node_modules/
+
+astra-streaming-nodejs-examples/package-lock.json
