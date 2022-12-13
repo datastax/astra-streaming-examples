@@ -1,0 +1,4 @@
+= Simple C# Astra Streaming producer
+
+This is an example .NET console app that produces a few messages in an Astra Streaming tenant.
+
