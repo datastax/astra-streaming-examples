@@ -1,0 +1,3 @@
+= Simple Node Astra Streaming app
+
+This is an example Node app that produces and consumes a message in an Astra Streaming tenant.

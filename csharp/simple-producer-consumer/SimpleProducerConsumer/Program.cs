@@ -6,10 +6,10 @@ var serviceUrl = "<REPLACE_WITH_SERVICE_URL>";
 var pulsarToken = "<REPLACE_WITH_PULSAR_TOKEN>";
 
 var tenantName = "<REPLACE_WITH_TENANT_NAME>";
-var namespace = "<REPLACE_WITH_NAMESPACE>";
+var nmspace = "<REPLACE_WITH_NAMESPACE>";
 var topicName = "<REPLACE_WITH_TOPIC>";
 
-var topic = $"persistent:{tenantName}/{namespace}/{topicName}";
+var topic = $"persistent://{tenantName}/{nmspace}/{topicName}";
 
 await using var client = PulsarClient.Builder()
                                       .serviceUrl(serviceUrl)

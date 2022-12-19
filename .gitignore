@@ -1,9 +1,15 @@
-.idea
-.DS_Store
-.vscode/
-**/target/
+# General things
+**/.DS_Store/
+**/.vscode/
+**/.idea/
+
+# Node things
 **/node_modules/
 **/package-lock.json
-**/.idea
+
+# .Net things
 **/obj/
 **/bin/
+
+# Java things
+**/target/
