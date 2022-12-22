@@ -1,3 +1,4 @@
+// tag::build-client[]
 package main
 
 import (
@@ -31,7 +32,9 @@ func main() {
 	}
 
 	defer client.Close()
+// end::build-client[]
 
+// tag::build-producer[]
 	log.Printf("creating producer...")
 
 	// Use the client to instantiate a producer
@@ -47,7 +50,9 @@ func main() {
 	defer producer.Close()
 
 	ctx := context.Background()
+// end::build-producer[]
 
+// tag::produce-message[]
 	asyncMsg := pulsar.ProducerMessage{
 		Payload: []byte(fmt.Sprintf("sent message")),
 	}
@@ -60,7 +65,9 @@ func main() {
 
 		log.Printf("the %s successfully published with the message ID %v", string(msg.Payload), msgID)
 	})
+// end::produce-message[]
 
+// tag::build-consumer[]
 	consumer, err := client.Subscribe(pulsar.ConsumerOptions{
 		Topic:                       topic,
 		SubscriptionName:            "examples-subscription",
@@ -74,7 +81,9 @@ func main() {
 	defer consumer.Close()
 
 	ctx = context.Background()
+// end::build-consumer[]
 
+// tag::receive-message[]
 	msg, err := consumer.Receive(ctx)
 	if err != nil {
 		log.Fatal(err)
@@ -87,4 +96,5 @@ func main() {
 		log.Fatal(err)
 		return
 	}
+// end::receive-message[]
 }
