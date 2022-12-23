@@ -54,7 +54,7 @@ func main() {
 
 // tag::produce-message[]
 	asyncMsg := pulsar.ProducerMessage{
-		Payload: []byte(fmt.Sprintf("sent message")),
+		Payload: []byte(fmt.Sprintf("Hello World")),
 	}
 
 	// Attempt to send the message asynchronously and handle the response
@@ -96,5 +96,5 @@ func main() {
 		log.Fatal(err)
 		return
 	}
-// end::receive-message[]
 }
+// end::receive-message[]
