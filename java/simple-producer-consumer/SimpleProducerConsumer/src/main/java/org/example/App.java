@@ -71,7 +71,6 @@ public class App
 
 // tag::close-client[]
     client.close();
-// end::close-client[]
-
   }
 }
+// end::close-client[]
