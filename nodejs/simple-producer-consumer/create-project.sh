@@ -9,24 +9,11 @@ sudo ldconfig
 # end::prep-env[]
 
 # tag::create-project[]
-mkdir SimpleProducerConsumer
-
-cd SimpleProducerConsumer
-
-npm init
-
-# Let npm use default values
-#   package name: (simpleproducerconsumer)
-#   version: (1.0.0)
-#   description:
-#   entry point: (index.js)
-#   test command:
-#   git repository:
-#   keywords:
-#   author:
-#   license: (ISC)
-
-npm install pulsar-client
+mkdir SimpleProducerConsumer && cd SimpleProducerConsumer
 
 touch index.js
+
+npm init -y
+
+npm install pulsar-client
 # end::create-project[]

@@ -47,7 +47,7 @@ const Pulsar = require("pulsar-client");
 // tag::create-consumer[]
   const consumer = await client.subscribe({
     topic: topic,
-    subscription: subscriptionName,
+    subscription: "examples-subscription",
     subscriptionType: "Exclusive",
     ackTimeoutMs: 10000,
   });
@@ -62,5 +62,5 @@ const Pulsar = require("pulsar-client");
 // tag::cleanup-consumer[]
   await consumer.close();
   await client.close();
-// end::cleanup-consumer[]
 })();
+// end::cleanup-consumer[]

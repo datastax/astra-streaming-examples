@@ -1,3 +1,5 @@
+mkdir SimpleProducerConsumer && cd SimpleProducerConsumer
+
 mvn archetype:generate \
     -DgroupId=org.example \
     -DartifactId=SimpleProducerConsumer \
