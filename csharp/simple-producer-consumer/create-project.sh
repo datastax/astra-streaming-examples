@@ -1,6 +1,6 @@
 dotnet new console \
   --output SimpleProducerConsumer \
-  --framework net7.0
+  --framework net6.0
 
 cd SimpleProducerConsumer
 

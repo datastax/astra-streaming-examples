@@ -12,9 +12,9 @@ var topicName = "<REPLACE_WITH_TOPIC>";
 var topic = $"persistent://{tenantName}/{nmspace}/{topicName}";
 
 await using var client = PulsarClient.Builder()
-                                      .serviceUrl(serviceUrl)
-                                      .authentication(
-                                        AuthenticationFactory.token(pulsarToken)
+                                      .ServiceUrl(new Uri(serviceUrl))
+                                      .Authentication(
+                                        AuthenticationFactory.Token(pulsarToken)
                                       )
                                       .Build();
 // end::build-client[]
@@ -39,9 +39,13 @@ await using var consumer = client.NewConsumer(Schema.String)
 // end::build-consumer[]
 
 // tag::consumer-loop[]
+var msgCount = 0;
 await foreach (var message in consumer.Messages())
 {
-    Console.WriteLine($"Received: {message.Value()}");
-    await consumer.Acknowledge(message);
+	msgCount++;
+	Console.WriteLine($"Received: {message.Value()}");
+	await consumer.Acknowledge(message);
+	
+	if(msgCount > 0) break;
 }
 // end::consumer-loop[]
