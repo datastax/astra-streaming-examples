@@ -1,1 +1,0 @@
-# astra-streaming-examples

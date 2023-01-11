@@ -1,6 +1,15 @@
-.DS_Store
-.vscode/
-target/
-node_modules/
+# General things
+**/.DS_Store/
+**/.vscode/
+**/.idea/
 
-astra-streaming-nodejs-examples/package-lock.json
+# Node things
+**/node_modules/
+**/package-lock.json
+
+# .Net things
+**/obj/
+**/bin/
+
+# Java things
+**/target/
