@@ -28,7 +28,7 @@ public class App {
   private static final String topic = String.format("persistent://%s/%s/%s", tenantName,namespace,topicName);
 
   public static void main(String[] args) {
-// tag::init-app[]
+// end::init-app[]
 // tag::build-config[]
     Properties config = new Properties();
     config.put("bootstrap.servers",bootstrapServers);
