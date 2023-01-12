@@ -15,16 +15,11 @@ import java.util.Collections;
 import java.util.Properties;
 
 public class App {
-  private static String bootstrapServers = "kafka-gcp-uscentral1.streaming.datastax.com:9093";
-  //"<REPLACE_WITH_BOOTSTRAP_SERVER_URL>";
-  private static String pulsarToken = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NzM1MzkzMDIsImlzcyI6ImRhdGFzdGF4Iiwic3ViIjoiY2xpZW50OzM0ZDBkZjZiLTRlMTEtNDgzMi1hOWExLTRlZmI3NTc1MThkNDtiWGt0ZEdWdVlXNTBMVEF3Tnc9PTs5OTU2MDI5N2QzIiwidG9rZW5pZCI6Ijk5NTYwMjk3ZDMifQ.dqkh7btrvbVItng43-xcF-V5LWoo0x5YlyY-zfpZoNUqIUfww2UvBsMi4oxdk9iNj7vJIR07Pp62h-B0QUYZlEhgYEdcS6aFd0juajhMY90wGiV2CqjU0jyUXdJYNtUbav4UdugAkDRhqrI7CxRN3m5iaE4fpTRTdc1F_TRo0Nuqe9miS7nBXp9lEff9KUtHIEnuEy_AmxnJPAp6Xf5pJv6Qg-dsLDSp-a4iOlYl9XZ04C1mDU8BthtXR6Ls6_G0EP0xzQC7O74RFEZ1LY994bWrGtI9OcXrrjNDZUxCFqCDmrdymcxZ1PhuW2kLdTwmxctp1GKPX8joNS3wq0Q2dg";
-  //"<REPLACE_WITH_PULSAR_TOKEN>";
-  private static String tenantName = "my-tenant-007";
-  //"<REPLACE_WITH_TENANT_NAME>";
-  private static final String namespace = "my-namespace";
-  //"<REPLACE_WITH_NAMESPACE>";
-  private static final String topicName = "my-topic";
-  //"<REPLACE_WITH_TOPIC>";
+  private static String bootstrapServers = "<REPLACE_WITH_BOOTSTRAP_SERVER_URL>";
+  private static String pulsarToken = "<REPLACE_WITH_PULSAR_TOKEN>";
+  private static String tenantName = "<REPLACE_WITH_TENANT_NAME>";
+  private static final String namespace = "<REPLACE_WITH_NAMESPACE>";
+  private static final String topicName = "<REPLACE_WITH_TOPIC>";
   private static final String topic = String.format("persistent://%s/%s/%s", tenantName,namespace,topicName);
 
   public static void main(String[] args) {
