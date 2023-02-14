@@ -1,5 +1,6 @@
 # tag::create-client[]
 import pulsar
+import time
 
 serviceUrl = "<REPLACE_WITH_SERVICE_URL>";
 pulsarToken = "<REPLACE_WITH_PULSAR_TOKEN>";
