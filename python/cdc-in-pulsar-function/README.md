@@ -36,3 +36,6 @@ To package it as ZIP one has to include the wheel for Avro. More details about t
 The code illustrates what goes on. Alternatively:
 
 ![Decoding CDC in a Pulsar Function](cdc_decode_function.png)
+
+*Beware*, the message body arrives in either bytes or string form and
+care must be taken for its further processing (check the code and the flow diagram above).

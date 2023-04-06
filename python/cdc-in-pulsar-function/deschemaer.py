@@ -85,9 +85,15 @@ def b64ToReadDict(b64string, avroReader):
 
 
 def cdcMessageToDictPF(pk, body, keyReader, valueReader):
+    # Body can be a 'str' or 'bytes' already depending on the length
+    # of the input fields in the table insert.
+    #       ¯\_(ツ)_/¯
+    # Take care of this:
+    encodedBody = body if isinstance(body, bytes) else body.encode()
+    #
     return {
         **bytesToReadDict(base64.b64decode(pk), keyReader),
-        **bytesToReadDict(body.encode(), valueReader),
+        **bytesToReadDict(encodedBody, valueReader),
     }
 
 
