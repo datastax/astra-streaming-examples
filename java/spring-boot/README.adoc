@@ -1,0 +1,3 @@
+= Simple Java Astra Streaming app
+
+This is the same example Java app that produces and consumes a message in an Astra Streaming tenant, but from a Spring Boot starter.
